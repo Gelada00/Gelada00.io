@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arrays</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            width: 80%;
+            margin: auto;
+            text-align: left;
+        }
+
+        button {
+            margin: 20px;
+            padding: 5px;
+            font-weight: bold;
+            border: 2px solid black;
+        }
+
+        img {
+            height: 300px;
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Arrays in JS</h1>
+    
+
+    <h3>Original List</h3>
+    <ul id="lists" type="square"></ul>
+
+    <h3>After sort and pop()</h3>
+    <div id="students"></div>
+
+    <h3>After Adding new items</h3>
+    <div id="newArray"></div>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <input type="text" id="input3">
+
+    <input type="button" value="Add to Array" onclick="myArray(input1.value, input2.value, input3.value)"> 
+
+
+    <script>
+        var students = [
+            'Jason',
+            'Super Santi',
+            'Cerny',
+            23,
+            33
+        ];
+        //        document.getElementById('students').innerHTML = students[2];
+
+        for (var i = 0; i < students.length; i++) {
+            document.getElementById('lists').innerHTML += '<li>' + students[i] + '</li>';
+        }
+        students.sort();
+        students.pop();
+        var text = "<ul>";
+        for (var i = 0; i < students.length; i++) {
+            text += '<li>' + students[i] + '</li>';
+        }
+        text += '</ul>';
+        document.getElementById('students').innerHTML = text;
+
+
+        function myArray(a, b, c) {
+            //            students[4] = a;
+            //            students[5] = b;
+            //            students[6] = c;
+            students.push(a, b, c);
+
+            var text = "<ul>";
+            for (var i = 0; i < students.length; i++) {
+                text += '<li>' + students[i] + '</li>';
+            }
+            text += '</ul>';
+            document.getElementById('newArray').innerHTML = text;
+        }
+      
+
+    </script>
+</body>
+
+</html>

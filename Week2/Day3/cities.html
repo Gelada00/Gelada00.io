@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>City Search</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            width: 80%;
+            margin: auto;
+            text-align: left;
+            text-align: center;
+            background-image: url(images/back3.jfif);
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .button {
+            margin: 10px;
+            padding: 5px;
+            font-weight: bold;
+            border: 2px solid black;
+        }
+
+        img {
+            height: 300px;
+            width: 300px;
+        }
+
+        #city,
+        #position {
+            display: inline;
+            margin-bottom: 10%;
+        }
+
+        #container {
+            margin-top: 10%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>City Search</h1>
+        <h3>Enter City Name:</h3>
+        <input type="text" id="input1" class="button"> <br>
+        <input type="button" , value="Search" , onclick="searchEngine(input1.value)" class="button"> <br>
+        <input type="button" , value="Display" , onclick="displayEngine()" class="button"> <br>
+        City: <div id="city"></div> <br>
+        Position: <div id="position"></div>
+    </div>
+
+    <script>
+       
+        var cities = ['berlin', 'copenhagen', 'london', 'aberdeen', 'moscow', 'geneva', 'amsterdam', 'madrid', 'glasgow', 'paris'];
+        var i;
+
+        function searchEngine(n) {
+            document.getElementById('city').innerHTML = "";
+            var cityName = n.toLowerCase();
+            var cityExist = false;
+            for (i = 0; i < cities.length; i++) {
+                //console.log(cityName);
+                if (cityName == cities[i]) {
+                    document.getElementById('city').innerHTML = cityName;
+                    document.getElementById('position').innerHTML = i;
+                    cityExist = true;
+                }
+            }
+            if (cityExist == false) {
+                document.getElementById('city').innerHTML = ' Sorry, ' + cityName + ' is not in the list';
+            }
+        }
+
+        function displayEngine() {
+            document.getElementById('city').innerHTML = "";
+            for (i = 0; i < cities.length; i++) {
+                document.getElementById('city').innerHTML += cities[i] + ', ';
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

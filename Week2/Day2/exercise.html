@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to capital Search</title>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cinzel', serif;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        button {
+            margin: 20px;
+            padding: 5px;
+            font-weight: bold;
+        }
+        h1{
+            background-color: #E2F5EC;
+            padding: 20px;
+            margin: 10px; 
+        }
+
+    </style>
+    
+</head>
+
+<body>
+   <h2 id="random">A random Number</h2>
+    <h1 id="demo"></h1> <br>
+    <button onclick="capitalSearch()">Capital Search</button>
+    <button onclick="switchSearch()">Capital Search 2</button> <br>
+    <img src="" id="img1">
+    <script>
+        window.addEventListener('load', capitalSearch, false);
+
+        function capitalSearch() {
+            var userInput = window.prompt('Please enter a capital name to find the country');
+            var capital = userInput.toLowerCase();
+            var text = document.getElementById('demo');
+            var img = document.getElementById('img1');
+
+
+            if (capital === 'london') {
+                alert('You have entered london');
+                text.textContent = 'London is the capital of Great Britain';
+                img.src = 'img/london.jpg';
+            } else if (capital === 'moscow') {
+                alert('You have entered moscow');
+                text.textContent = 'Moscow is the capital of Russia';
+                img.src = 'img/moscow.jpg';
+            } else if (capital === 'madrid') {
+                alert('You have entered madrid');
+                text.textContent = 'Madrid is the capital of Spain';
+                img.src = 'img/madrid.jpg';
+            } else if (capital === 'paris') {
+                alert('You have entered paris');
+                text.textContent = 'Paris is the capital of France';
+                img.src = 'img/paris.jpg';
+            } else {
+                alert('You have entered ' + capital);
+                text.textContent = 'Sorry ' + capital + " is not in the list";
+                img.src = 'img/notfound.jpg';
+            }
+        }
+
+        function switchSearch() {
+            var userInput = window.prompt('Please enter a capital name to find the country');
+            var capital = userInput.toLowerCase();
+            var text = document.getElementById('demo');
+            var img = document.getElementById('img1');
+
+            switch (capital) {
+                case 'london':
+                    console.log(text.textContent = 'you entered london');
+                    alert('You have entered london');
+                    text.textContent = 'London is the capital of Great Britain';
+                    img.src = 'img/london.jpg';
+                    break;
+
+                case 'moscow':
+                    console.log(text.textContent = 'you entered moscow');
+                    alert('You have entered moscow');
+                    text.textContent = 'Moscow is the capital of Russia';
+                    img.src = 'img/moscow.jpg';
+                    break;
+
+                case 'madrid':
+                    console.log(text.textContent = 'you entered madrid');
+                    alert('You have entered madrid');
+                    text.textContent = 'Madrid is the capital of Spain';
+                    img.src = 'img/madrid.jpg';
+                    break;
+
+                case 'paris':
+                    console.log(text.textContent = 'you entered paris');
+                    alert('You have entered paris');
+                    text.textContent = 'Paris is the capital of France';
+                    img.src = 'img/paris.jpg';
+                    break;
+
+                default:
+                    console.log('Not found');
+                    alert('You have entered ' + capital);
+                    text.textContent = 'Sorry ' + capital + " is not in the list";
+                    img.src = 'img/notfound.jpg';
+                    break;
+            }
+                
+        }
+        
+        var aNumber = Math.floor(Math.random() * 6);
+        document.getElementById('random').innerHTML = aNumber;
+        console.log(aNumber);
+
+    </script>
+</body>
+
+</html>

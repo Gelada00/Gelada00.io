@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300i,400&display=swap');
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#landing {
+    background-color: #e6eeff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    color: #1a0d00;
+    letter-spacing: 0.3rem;
+    text-shadow: 1px 1px 2px #000000;
+
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #331a00;
+    margin-bottom: 40px;
+    letter-spacing: 0.2rem;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+#landing-text {
+    display: flex;
+    flex: 0 1 40vh;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+    text-align: center;
+}
+
+#landing-image {
+    background-image: url("../images/photo9.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+
+}
+
+.btn1 {
+    border: 1px #ccc solid;
+    border-color: #331a00;
+    padding: 0.5rem 0.5rem;
+    margin: 2.5rem 0.5rem;
+    border-radius: 50px;
+    color: #4d2600;
+    background-color: #4d94ff;
+    text-decoration: none;
+    transition: background 500ms ease;
+    font-size: 16px;
+    font-weight: bolder;
+
+}
+
+.btn1:hover {
+    background-color: #cce0ff;
+}
+
+.header {
+    background-color: #e6e6ff;
+    text-align: center;
+    padding: 0.3rem;
+    margin: 10px;
+}
+
+.header h2 {
+    font-weight: lighter;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 30%;
+}
+
+.caption {
+    text-align: center;
+    margin: -10;
+    color: #744d25;
+}
+
+h4 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #744d25;
+}
+
+.block {
+    width: 33.33%;
+    float: left;
+    display: inline-block;
+    height: 300px;
+    border: 1px solid brown;
+    padding: 10PX;
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+}
+
+.myForm {
+    padding: 20px;
+}
+
+.myForm label {
+    display: block;
+}
+
+.myForm input[type="text"],
+.myForm input[type="tel"],
+.myForm input[type="number"],
+.myForm input[type="email"],
+.myForm textarea {
+    padding: 5px;
+    width: 60%;
+}
+
+#formDiv {
+    width: 60%;
+    float: left;
+}
+
+#addressDiv {
+    width: 40%;
+    float: left;
+    margin-top: 40px;
+}
+
+footer {
+    background-color: #e6eeff;
+    text-align: center;
+    padding: 0.3rem;
+    margin: 10px;
+}
+
+/*do this style for fixed button if required*/
+/*
+.fix{
+    position: fixed;
+    top: 50vh;
+    margin-left: -3.8rem;
+}
+*/
+#logo {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#flex1,
+#flex2,
+#flex3 {
+    padding: 10px;
+    margin: 10px;
+    background-color: #cce0ff;
+}
+
+
+@media screen and (max-width:768px) {
+
+    /*
+    body {
+        display: none;
+    }
+*/
+    .block,
+    #formDiv,
+    #addressDiv,
+    #landing-text,
+    h2 {
+        width: 100%;
+        height: 100%;
+        float: none;
+        text-align: center;
+
+
+    }
+
+    #addressDiv {
+        margin: 10px;
+
+    }
+
+    #formDiv input,
+    #formDiv textarea {
+        border: 0.5px solid grey;
+    }
+
+    h1 {
+        margin-top: 20px;
+        letter-spacing: normal;
+        font-size: 2rem;
+    }
+
+    .btn1 {
+        margin-top: 0px;
+        display: inline-block;
+        width: 30%;
+        padding: 10px;
+    }
+
+    #logo {
+        width: 10%;
+        height: 10%;
+        top: 2%;
+        left: 10%;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+

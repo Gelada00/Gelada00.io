@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>City Search</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            width: 80%;
+            margin: auto;
+            text-align: left;
+            text-align: center;
+            /*            background-image: url(images/mml.jfif);*/
+            background-size: cover;
+            background-position: center;
+
+
+        }
+
+        .button {
+            margin: 10px;
+            padding: 5px;
+            font-weight: bold;
+            border: 2px solid black;
+        }
+
+        img {
+            height: 300px;
+            width: 300px;
+        }
+
+        #city,
+        #position {
+            display: inline;
+            margin-bottom: 10%;
+        }
+
+        #container {
+            margin-top: 30%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+ <h1> JavaScript Test </h1>
+
+    <p> Below is some JavaScript:</p>
+
+    <p> Text: </p>
+        <input id="textIn" type="text" name="textIn" placeholder="plz enter text and numbers" required>
+        <br><br>
+        <button id="submit">Submit</button>
+    
+
+    <p id="result"> </p>
+<!--
+    <h1>Find Vowels, Consonants and Numbers</h1>
+    <h3>Please type test here: </h3> <br>
+    <input type="text" id="userInput">
+    <input type="button" value="Submit" onclick="finder(userInput.value)"> <br>
+    Vowels are:<div id="vowels"></div>
+    Numbers are: <div id="numbers"></div>
+    Consonants are: <div id="conson"></div>
+   
+-->
+
+<!--
+    <script>
+        function finder(n) {
+            var userInput = n;
+            var ptrn1 = /[aeiou]/gi;
+            var ptrn2 = /^[0-9]+$/;
+            var ptrn3 = /\[a-z]/gi;
+            for (var i = 0; i < n.length; i++) {
+                if (userInput[i].search(ptrn1) == 0) {
+                    document.getElementById('vowels').innerHTML += userInput[i];
+                } else if (userInput[i].search(ptrn2) == 0) {
+                    document.getElementById('numbers').innerHTML += userInput[i];
+                } else {
+                    document.getElementById('conson').innerHTML += userInput[i];
+                } 
+            }
+        }
+
+    </script>
+-->
+
+ <script type="text/javascript">
+        document.getElementById("submit").addEventListener("click", function() {
+
+            //event.preventDefault();
+            document.getElementById("result").innerHTML = "";//Remove old values for page
+                
+            var text = document.getElementById("textIn").value;
+//            var txtArray = text.split("");
+
+            var consonant = "Consonants are: ";
+            var vowel = "Vowels are: ";
+            var number = "Numbers are: ";
+            
+            for (var i = 0; i < text.length; i++) {
+                
+                
+				//if (text[i] == "e" || text[i] == "a" || text[i] == "i" || text[i] == "o" || text[i] == "u"|| text[i] == "E" || text[i] == "A" || txtArray[i] == "I" || txtArray[i] == "O" || txtArray[i] == "U") 
+				if(text[i].match(/[aeiou]/gi)!=null)
+				{
+					
+					vowel += text[i] + ", ";
+				} else if (text[i].match(/^[0-9]+$/) != null) {
+
+					number += text[i] + " ,";
+				} else if (text[i].match(/^[a-zA-Z]+$/) != null) {
+					consonant += text[i] + " ,";
+				}
+            }
+//            vowel = vowel.replace(/,\s*$/, "");
+//            number = number.replace(/,\s*$/, "");
+//            consonant = consonant.replace(/,\s*$/, "");
+
+            document.getElementById("result").innerHTML += vowel + "<br>" + number + "<br>" + consonant;
+
+        });
+    </script>
+</body>
+
+</html>

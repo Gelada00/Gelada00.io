@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Find out Dwarfs age!</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            width: 80%;
+            margin: auto;
+            text-align: left;
+            text-align: center;
+            margin-top: 10%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h2>Welcome to the Dwarfs world!</h2>
+    The oldest dwarf is: <p id="demo"></p>
+    <hr>
+    <h3>This is the list of all dwarfs:</h3>
+    <div id="stl">
+        <div id="all"></div>
+    </div>
+    <script>
+        var name, age, image;
+
+        function dwarfsPapa(n, a, i) {
+            this.name = n;
+            this.age = a;
+            this.image = i;
+        }
+        var dwarf = [];
+
+        dwarf[0] = new dwarfsPapa('Happy', Math.round(Math.random() * (30 - 18) + 18), 'img/happy.jfif');
+        dwarf[1] = new dwarfsPapa('Dopey', Math.round(Math.random() * (30 - 18) + 18), 'img/dopey.jfif');
+        dwarf[2] = new dwarfsPapa('Grumpy', Math.round(Math.random() * (30 - 18) + 18), 'img/grumpy.jfif');
+        dwarf[3] = new dwarfsPapa('Sneezy', Math.round(Math.random() * (30 - 18) + 18), 'img/sneezy.jfif');
+        dwarf[4] = new dwarfsPapa('Bashful', Math.round(Math.random() * (30 - 18) + 18), 'img/bashful.jfif');
+        dwarf[5] = new dwarfsPapa('Sleepy', Math.round(Math.random() * (30 - 18) + 18), 'img/sleepy.png');
+        dwarf[6] = new dwarfsPapa('Doc', Math.round(Math.random() * (30 - 18) + 18), 'img/doc.jfif');
+
+        var i;
+        var oldDwarfName = "";
+        var oldDwarfAge = "";
+
+        for (i = 0; i < dwarf.length; i++) {
+
+            if (dwarf[i].age >= oldDwarfAge) {
+                oldDwarfAge = dwarf[i].age;
+                oldDwarfName = dwarf[i].name;
+                oldDwarfPicture = dwarf[i].image;
+            }
+        }
+        console.log(dwarf);
+        document.getElementById('demo').innerHTML += oldDwarfName + ' and he is ' + oldDwarfAge + ' years old. He is the oldest dwarf! ' + "<br><img src='" + oldDwarfPicture + "'>";
+
+       for(i = 0; i < dwarf.length; i++){
+           document.getElementById('all').innerHTML += dwarf[i].name + ' and he is ' + dwarf[i].age + ' years old.' + "<br><img src='" + dwarf[i].image + "'>";
+       }
+
+    </script>
+</body>
+
+</html>

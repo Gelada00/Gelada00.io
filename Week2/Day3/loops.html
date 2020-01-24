@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to Dice Game!</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+
+        button {
+            margin: 20px;
+            padding: 5px;
+            font-weight: bold;
+            border: 2px solid black;
+        }
+
+        img {
+            height: 300px;
+            width: 300px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>For While and Do-While Loops</h1>
+    <!--
+    <h3>For loop</h3>
+    <div id="forLoop"></div>
+
+    <h3>Do-While Loop</h3>
+    <div id="doLoop"></div>
+
+    <h3>Do-While Loop</h3>
+    <div id="whileLoop"></div>
+-->
+
+
+    <!--
+    <h3>Choose the loop</h3>
+    <div>
+        <div id="result"></div>
+        <input type="button" onclick="forLoop()" id="answer1" value="For Loop">
+        <input type="button" onclick="doLoop()" id="answer2" value="Do Loop">
+        <input type="button" onclick="whileLoop()" id="answer1" value="While Loop">
+    </div>
+-->
+
+
+    <h3>Choose a loop</h3>
+    Enter the initial value of loops: <input type="number" id="input1"> <br>
+    Enter the last value of loops: <input type="number" id="input2"> <br>
+
+    <input type="button" onclick="forLoop(input1.value, input2.value)" value="For Loop">
+    <input type="button" onclick="doLoop(input1.value, input2.value)" value="Do Loop">
+    <input type="button" onclick="whileLoop(input1.value, input2.value)" value="While Loop">
+    <div></div>
+    <div id="result"></div>
+    <div id="result1"></div>
+    <div id="result2"></div>
+
+
+    <script>
+        //        for (var i = 0; i < 10; i++) {
+        //            document.getElementById('forLoop').innerHTML += i + " <br>";
+        //        }
+        //
+        //        var i = 1;
+        //        do {
+        //            document.getElementById('doLoop').innerHTML += i + " <br> ";
+        //            i++;
+        //        } while (i <= 10);
+        //
+        //        var i = 0;
+        //        while (i <= 11) {
+        //            document.getElementById('whileLoop').innerHTML += i + " <br> ";
+        //            i++;
+        //        }
+
+        function forLoop(i, n) {
+            var n1 = parseInt(n);
+            document.getElementById('result').innerHTML = "For Loop Result: " + '<br>';
+            for (; i <= n1; i++) {
+                document.getElementById('result').innerHTML += i + " <br>";
+            }
+        }
+
+        function doLoop(i, n) {
+            var n1 = parseInt(n);
+            document.getElementById('result1').innerHTML = "Do-While Loop Result: " + '<br>';
+            do {
+                document.getElementById('result1').innerHTML += i + " <br> ";
+                i++;
+            } while (i <= n1);
+        }
+
+        function whileLoop(i, n) {
+            var n1 = parseInt(n);
+            document.getElementById('result2').innerHTML = "While Loop Result: " + '<br>';
+            while (i <= n1) {
+                document.getElementById('result2').innerHTML += i + " <br> ";
+                i++;
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

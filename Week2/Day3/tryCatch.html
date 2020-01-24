@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>City Search</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            width: 80%;
+            margin: auto;
+            text-align: left;
+            text-align: center;
+            background-image: url(images/mml.jfif);
+            background-size: cover;
+            background-position: center;
+            margin-left: 30%;
+
+        }
+
+        .button {
+            margin: 10px;
+            padding: 5px;
+            font-weight: bold;
+            border: 2px solid black;
+        }
+
+        img {
+            height: 300px;
+            width: 300px;
+        }
+
+        #city,
+        #position {
+            display: inline;
+            margin-bottom: 10%;
+        }
+
+        #container {
+            margin-top: 30%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Error Handling</h1>
+    <div id="catch"></div>
+    <div id="finally"></div>
+
+    <script>
+        try {
+            allert('Welcome to JS');
+        } catch (er) {
+            document.getElementById('catch').innerHTML = er.message + "<br>" + 'something is wrong with this function';
+        }
+
+    </script>
+    <hr>
+    Please enter the number between 5 and 10: <input type="text" id="input1">
+    <input type="button" onclick="validation()" value="Validate input">
+    <p id="message"></p>
+    <script>
+        function validation() {
+            var x = document.getElementById('input1').value;
+            try {
+                if (x == "") {
+                    throw "Empty box...";
+                }
+                if (isNaN(x)) {
+                    throw "It is not a number";
+                }
+                if (x < 5) {
+                    throw "Input is less than 5";
+                }
+                if (x > 10) {
+                    throw "Input is greater than 10";
+                }
+                if (x >= 5 && x <= 10) {
+                    throw "Correct ra  nge of number";
+                }
+            } catch (err) {
+                document.getElementById('message').innerHTML = "your input is: " + err;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

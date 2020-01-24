@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> JavaScript </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <button onclick="clickF()">click here</button>
+    <!--
+    <script>
+        console.log('An event is expected.');
+
+        function clickF() {
+            alert('You clicked a button.');
+        }
+
+    </script> <br>
+    <script>
+        var fname = 'Jason';
+        var lname = 'Smith';
+        var age = 28;
+        var address;
+        document.write('First name: <h2>' + fname + "</h2><br> " + 'Last name: ' + lname + "<br> " + 'Age ' + age);
+
+        console.log(typeof(fname));
+        console.log(typeof(lname));
+        console.log(typeof(age));
+        console.log(typeof(address));
+
+        var x = 25;
+        var y = 30;
+
+        if (x != y) {
+            console.log('True as 25 is not equal to 30');
+        } else {
+            console.log('False as 25 is equal to 30');
+        }
+
+        var x = 25;
+        var y = '25';
+
+        if (x !== y) {
+            console.log('True as 25 is a string and not eual by type');
+        } else {
+            console.log('False as 25 is equal by type and value');
+        }
+
+    </script>
+    //comparison by type AND value
+    <script>
+        var num = 5;
+        var name = '5';
+
+        if (num === name) {
+            console.log('true');
+        } else{
+            console.log('false');
+        }
+
+    </script>
+-->
+    <p id="demo"></p>
+    <script>
+        var time = new Date().getHours();
+        var print = document.getElementById('demo');
+        console.log(print);
+
+        console.log(time);
+        if (time >= 6 & time < 12) {
+            console.log('Good morning!');
+            print.textContent = 'Good morning';
+
+        } else if (time >= 12 & time < 16) {
+            console.log('Good Afternoon');
+            print.textContent = 'Good afternoon';
+        } else if (time >= 16 & time < 22) {
+            console.log('Good evening');
+            print.textContent = 'Good evening';
+        } else {
+            console.log('Good night');
+            print.textContent = 'Good night';
+        }
+
+    </script>
+
+</body>
+
+</html>

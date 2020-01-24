@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Objects in JS</title>
+    <meta charset="utf-8">
+    <style>
+        table {
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Constructor Objects in JS</h1>
+    <p id="demo"></p>
+ 
+
+    <script>
+        var stdID, fname, lname, gender, email;
+
+        function students(id, fname, lname, gender, email) {
+            this.stdID = id;
+            this.fname = fname;
+            this.lname = lname;
+            this.gender = gender;
+            this.email = email;
+        }
+
+        //        var student1 = new students(101, 'Johnny', 'Johnny', 'male', 'johnny@gmail.com');
+        //        var student2 = new students(102, 'Ali', 'Khan', 'male', 'ali@gmail.com');
+        //        var student3 = new students(103, 'Daniel', 'Smith', 'male', 'daniel@gmail.com');
+        //        document.getElementById('demo').innerHTML += student[0].stdID + ' ' + student[0].fname + ' ' + student[0].email + "<br>";
+        //        document.getElementById('demo').innerHTML += student[1].stdID + ' ' + student[1].fname + ' ' + student[1].email + "<br>";
+        //        document.getElementById('demo').innerHTML += student[2].stdID + ' ' + student[2].fname + ' ' + student[2].email;
+
+        var student = [];
+        student[0] = new students(101, 'Johnny', 'Johnny', 'male', 'johnny@gmail.com');
+        student[1] = new students(102, 'Ali', 'Khan', 'male', 'ali@gmail.com');
+        student[2] = new students(103, 'Daniel', 'Smith', 'male', 'daniel@gmail.com');
+
+        var table1= "   <table> <tr> <th>ID</th> <th>First Name</th> <th>Last Name</th><th>Gender</th> <th>email</th> </tr>";
+        for (var i = 0; i < student.length; i++) {
+            table1+='<tr><td>' + student[i].stdID + '</td><td>' + student[i].fname + '</td><td>' + student[i].lname +'</td><td>' + student[i].gender + '</td><td>'+student[i].email + '</td></tr>';
+        }
+        table1+="</table>";
+        document.getElementById('demo').innerHTML =table1;
+        
+        
+    </script>
+</body>
+
+</html>

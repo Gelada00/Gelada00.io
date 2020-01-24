@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>City Search</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            width: 80%;
+            margin: auto;
+            text-align: left;
+            text-align: center;
+            background-image: url(images/leaf.jfif);
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .button {
+            margin: 10px;
+            padding: 5px;
+            font-weight: bold;
+            border: 2px solid black;
+        }
+
+        img {
+            height: 300px;
+            width: 300px;
+        }
+
+        #city,
+        #position {
+            display: inline;
+            margin-bottom: 10%;
+        }
+
+        #container {
+            margin-top: 30%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Reg Expressions</h1>
+    <p>Original string: "JavaScript is fun."</p>
+    JS Expression position for 'fun': <p id="demo1"></p>
+    JS Expression string: <p id="demo1"></p>
+    JS Expression replace string: <p id="demo2"></p>
+
+    <script>
+        //        i -  make case sensitive, g - to make global search, you can use gi together
+        var str = "JavaScript is fun.";
+        var n = str.search(/t/ig);
+        document.getElementById('demo1').innerHTML = n;
+        var repl = str.replace("fun", "Front End language");
+        document.getElementById('demo2').innerHTML = repl;
+    </script>
+    
+    <hr>
+    <h2>Example of g and i modifiers</h2>
+    <div id="global"></div>
+    
+    <script>
+        var str = "Welcome to the JavaScript training.";
+        //        if search is global, it shows all a's' within the string(for str it would display 3 a's)
+        var ptrn = /t/g;
+        //        var ptrn = /a/;
+        var result = str.match(ptrn);
+        document.getElementById('global').innerHTML = result;
+
+    </script>
+    
+    <hr>
+    <input type="text" id="input1" required>
+    <input type="button" onclick="chkNumber()" value="Check Number">
+    
+    <script>
+        function chkNumber(){
+             var userInput = document.getElementById('input1').value
+             var reg = /^\d+$/;
+            var inputs=userInput.search(reg);
+            if(userInput.search(reg) == 0){
+                alert("It is a number " + inputs);
+            } else if(userInput == "") {
+                alert("the box is empty");
+            }
+            else{
+                alert("It is NOT a number " + inputs);
+            }
+        }
+    </script>
+</body>
+
+</html>

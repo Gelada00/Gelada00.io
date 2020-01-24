@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+}
+
+.greyStyle {
+    height: 50px;
+    background-color: grey;
+    margin: 0px;
+    border-bottom: 2px solid brown;
+}
+
+.justStyle {
+    height: 60px;
+    background-color: grey;
+    margin: 0px;
+}
+
+body {
+    padding: 0px;
+    font-family: sans-serif;
+
+}
+
+#landing {
+    background-image: url(../images/pic.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 30vh;
+    text-align: center;
+    color: #0F0504;
+    font-weight: bold;
+
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#flex1,
+#flex2,
+#flex3 {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+#containerflex {
+    display: flex;
+    flex-direction: row;
+}
+
+#flexy1 {
+    text-align: left;
+    margin: 10px;
+    width: 70%;
+
+
+}
+
+#flexy1 h5 {
+    margin-bottom: 15px;
+}
+
+#flexy2 {
+    width: 30%;
+    margin: 10px;
+    background-color: #9BC1C3;
+    padding: 30px;
+
+}
+
+#flexy2 h5 {
+    margin-bottom: 15px;
+}
+
+
+#landing h1 {
+    padding-top: 70px;
+    letter-spacing: 2px;
+}
+
+#landing p {
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+.leftFloat {
+    float: left;
+    padding-left: 100px;
+    padding-top: 15px;
+}
+
+.rightFloat {
+    float: right;
+    padding-right: 100px;
+    padding-top: 15px;
+}
+
+.letterStyle {
+    color: orange;
+}
+
+footer {
+    background-color: darkorange;
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+    width: 100%;
+}
+
+.btn1 {
+    padding: 0.2rem 0.2rem;
+    margin: 2.5rem 0.5rem;
+
+    color: black;
+    text-decoration: none;
+    transition: background 2000ms ease;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn1:hover {
+    background-color: white;
+}
+
+button, .button {
+    border: none;
+    padding: 5px;
+    margin: 2px;
+    background-color: orange;
+}
+#services{
+    width: 50%;
+    padding-left: 100px;
+    box-sizing: border-box;
+    float: left;
+}
+h4{
+    padding: 10px;
+}
+.servDes{
+    border: 1px solid grey;
+    margin: 10px;
+    padding: 10px;
+    background-color: #DAD9D9;
+    float: left;
+}
+.servDes p, h5{
+    padding: 5px;
+}
+.myForm{
+    float: right;
+    width: 30%;
+    margin: 50px;
+    display: block;
+    background-color: #9BC1C3;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    
+}
+.myForm input[type="text"],
+.myForm input[type="email"],
+.myForm textarea {
+    padding: 2px;
+    width: 80%;
+}
+.clear{
+    clear: both;
+}
+.adjust{
+    padding: 5px;
+}
