@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Savings Account</title>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <h1>Saving Account</h1>
+    Account Holder:<p id="name"></p>
+    Account Balance:<p id="balance"></p>
+
+    Transaction Type: <select name="Transaction Type" id="type1">
+        <option value="select">Please select</option>
+        <option value="deposit" id="deposit">Deposit</option>
+        <option value="withdraw" id="withdraw">Withdraw</option>
+    </select> <br>
+    Amount: <input id="amount" type="number" name="amount" required> <br>
+    <button id="submit" onclick="transaction(type1.value, amount.value)">Complete Transaction</button>
+    <div id="done"></div>
+
+    <script>
+        var event1 = document.getElementById("submit");
+//        event1.addEventListener('click', transaction, false);
+        var deposit = 0;
+        var withdraw = 0;
+
+        class client {
+            constructor(name, balance) {
+                this.name = name;
+                this.balance = balance;
+            }
+            depositMoney(amount) {
+                var left = parseInt(amount) + this.balance;
+                document.getElementById('done').innerHTML = 'You have deposited ' + parseInt(amount) + ' amount of money';
+                document.getElementById('balance').innerHTML = customer1.balance;
+                
+            }
+            withdrawMoney(amount) {
+                var left = this.balance - parseInt(amount);
+                document.getElementById('done').innerHTML = 'You have withdrawn ' + parseInt(amount) + ' amount of money';
+                document.getElementById('balance').innerHTML = customer1.balance;
+                
+            }
+
+        }
+
+        var customer1 = new client('Alex', 2000);
+        document.getElementById('name').innerHTML = customer1.name;
+        document.getElementById('balance').innerHTML = customer1.balance;
+        
+        customer1.depositMoney();
+        customer1.withdrawMoney();
+
+        function transaction(type1, amount) {
+            if (type1 == 'deposit') {
+                customer1.depositMoney(amount);
+            } else {
+                customer1.withdrawMoney(amount);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

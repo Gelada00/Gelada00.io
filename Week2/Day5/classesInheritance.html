@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Classes inheritance in JS</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Classes and Inheritance in JS</h1>
+    <div id="enrolled"></div>
+    <div id="all"></div>
+    <div id="pathway"></div>
+    <div id="available"></div>
+
+
+
+
+    <script>
+        class learner {
+            //constructor called when you create an object
+            constructor(fname, lname, age, gender) {
+                this.fname = fname;
+                this.lname = lname;
+                this.age = age;
+                this.gender = gender;
+            }
+
+            //function
+            enroll() {
+                document.getElementById('enrolled').innerHTML = this.fname + " is enrolled.";
+            }
+            //static function
+            static counterLearners() {
+                document.getElementById('all').innerHTML = " There are 33 learners enrolled.";
+
+            }
+
+
+        }
+        var jonny = new learner('Jonny', 'Smith', 15, 'male');
+        jonny.enroll();
+
+        //calling a static method
+        learner.counterLearners();
+
+
+        //inheriting from the class above
+        class pathways extends learner {
+            constructor(fname, lname, age, gender, pathwayL) {
+                super(fname, lname, age, gender);
+                this.learnerPathway = pathwayL;
+            }
+
+            choosePathway() {
+                document.getElementById('pathway').innerHTML = this.fname + ' have selected ' + this.learnerPathway + ' pathway';
+            }
+            static checkAvailability() {
+                document.getElementById('available').innerHTML = 'This is static and global';
+            }
+        }
+        //object of the extended class
+        var learner1 = new pathways('Anna', 'Jones', 55, 'female', 'DPP');
+        learner1.choosePathway();
+        pathways.checkAvailability();
+
+    </script>
+</body>
+
+</html>

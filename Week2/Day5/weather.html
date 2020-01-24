@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Weather API</title>
+    
+</head>
+
+<body>
+   <h1>Weather API</h1>
+   Enter a city name: <input type="text" id="theCity">
+   <button id="btn1" onclick="loadData()">Get Weather!</button>
+   <div id="demo"></div>
+    <script>
+        function loadData(){
+            var city = document.getElementById('theCity').value;
+            var htmlData = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&mode=html&APPID=3a7570627ee3fd5e43d44283e55586a3";
+            
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if(xhttp.readyState == 4 && xhttp.status == 200){
+                    var data1 = xhttp.responseText;
+                    document.getElementById('demo').innerHTML = data1;
+                }
+            }
+            xhttp.open("GET", htmlData, true);
+            xhttp.send();
+        }
+   
+    </script>
+</body>
+
+</html>

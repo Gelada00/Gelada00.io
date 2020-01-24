@@ -1,0 +1,32 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <script>
+        var firstName, lastName, age, gender;
+
+        function human(fName, lName, ag, ge) {
+            this.firstName = fName;
+            this.lastName = lName;
+            this.age = ag;
+            this.gender = ge;
+        }
+
+        lady = new human('Anna', 'Smith', 23, 'Female');
+        console.log(lady);
+
+        human.prototype.fullName = function() {
+            return this.firstName + '' + this.lastName;
+        }
+
+        var ladiesName = lady.fullName();
+
+        console.log(ladiesName);
+
+    </script>
+</body>
+
+</html>
