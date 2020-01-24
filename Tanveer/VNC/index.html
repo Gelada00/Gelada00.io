@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1> JavaScript Test </h1>
+
+    <p> Below is some JavaScript:</p>
+
+    <p> Text: </p>
+        <input id="textIn" type="text" name="textIn" placeholder="plz enter text and numbers" required>
+        <br><br>
+        <button id="submit">Submit</button>
+    
+
+    <p id="result"> </p>
+
+
+    <script type="text/javascript">
+        document.getElementById("submit").addEventListener("click", function() {
+
+            //event.preventDefault();
+            document.getElementById("result").innerHTML = "";//Remove old values for page
+                
+            var text = document.getElementById("textIn").value;
+//            var txtArray = text.split("");
+
+            var consonant = "Consonants are: ";
+            var vowel = "Vowels are: ";
+            var number = "Numbers are: ";
+            
+            for (var i = 0; i < text.length; i++) {
+                
+                
+				//if (text[i] == "e" || text[i] == "a" || text[i] == "i" || text[i] == "o" || text[i] == "u"|| text[i] == "E" || text[i] == "A" || txtArray[i] == "I" || txtArray[i] == "O" || txtArray[i] == "U") 
+				if(text[i].match(/[aeiou]/gi)!=null)
+				{
+					
+					vowel += text[i] + ", ";
+				} else if (text[i].match(/^[0-9]+$/) != null) {
+
+					number += text[i] + " ,";
+				} else if (text[i].match(/^[a-zA-Z]+$/) != null) {
+					consonant += text[i] + " ,";
+				}
+            }
+//            vowel = vowel.replace(/,\s*$/, "");
+//            number = number.replace(/,\s*$/, "");
+//            consonant = consonant.replace(/,\s*$/, "");
+
+            document.getElementById("result").innerHTML += vowel + "<br>" + number + "<br>" + consonant;
+
+        });
+    </script>
+
+</body>
+
+</html>

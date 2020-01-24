@@ -1,0 +1,20 @@
+body    {
+    font-family: 'Chakra Petch', sans-serif;
+    color: white;
+    background: rgb(58, 54, 54);
+	width:80%;
+	margin:auto;
+    }
+h1  {
+    text-align: center;
+    color:green;
+    background-color:aliceblue;
+    border: 5px solid green;
+    width: 250px;
+    padding: auto;
+    margin: auto;
+    }
+#javascript {
+    background-color:darkslateblue;
+    width: auto;
+}

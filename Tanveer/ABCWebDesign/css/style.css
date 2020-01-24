@@ -1,0 +1,228 @@
+
+
+body{
+/*
+    font-family: Arial, sans-serif, cursive;
+    font-size: 15px;
+    line-height: 1.5;
+*/
+/*    instead of above 3 statement, use 1 statement below */
+    font: 15px 1.5 sans-serif, cursive;
+    padding: 0;
+    margin:0;
+    background-color: #f4f4f4;
+}
+
+/*Global */
+.container{
+/*    to make it responsive, make it % not specific numbers i.e. the width of the web page */
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+/*global dark background e.g. apply it to a div around the Sidebar */
+.dark{
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-top: 10px;
+    
+}
+.current a{
+    font-weight: bold;
+    color: orange;
+}
+
+.button_1{
+    height: 38px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color:#ffffff;
+}
+
+/*header */
+header{
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;    
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+header li{
+    
+    float: left;
+    display: inline;
+/*    top right bottom left ... we want to set paddign on right and left only. */
+    padding: 0 20px 0 20px;
+}
+
+header #branding{
+    float: left;
+}
+
+header #branding h1{
+    margin:0;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header current a{
+    color: #a8491d;
+    font-weight: bold;
+}
+
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/*the boxes in home page */
+#boxes{
+    margin-top: 20px;
+}
+
+#boxes .box{
+    float:  left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+#boxes .box img{
+    width: 70%;
+}
+
+/*showcase section */
+#showcase{
+  height: 300px;
+    background: url('../images/showcase.jpg');
+    color: orange;
+    text-align: center;
+}
+
+#showcase h1{
+/*    to move the h1 down by 100px*/
+    margin-top: 100px;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/*to increase the font size of p in showcase */
+#showcase p{
+    font-size: 20px;
+}
+
+/*Newsletter */
+#newsletter{
+    padding: 15px;
+    color: #ffffff;
+    background: #35424a;
+}
+
+#newsletter h1{
+    float: left;
+}
+
+#newsletter form{
+    float: right;
+    margin-top: 15px;
+}
+
+#newsletter input[type="email"]{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center; 
+}
+
+/*sidebar in About page */
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+
+/*main col/article in About page*/
+article#main-col{
+    float: left;
+    width: 65%;
+}
+
+/*Services page */
+#services li{
+    list-style: none;
+    padding: 20px;
+    border: #cccccc solid 2px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+
+/*Quote form style */
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+    width: 90%;
+    padding: 5px;
+}
+
+/*Media queries to make website responsive to different screen sizes*/
+@media(max-width: 768px){
+/*
+    body{
+        display: none;
+    }
+*/
+/*    to remove floating items i.e. overlapping*/
+    header #branding, 
+    header nav, 
+    header nav li,
+    #newsletter h1, 
+    #newletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }    
+    
+    header{
+        padding-bottom: 20px;
+    }
+    
+    #showcase h1{
+/*        by defaul it is 100px, as in this screen there is lot of space, 40px is enough */
+        margin-top: 40px;  
+    }
+    
+/*    to avoid newsletter button going to next line*/
+    #newsletter button, .quote button{
+        display: block;
+        width: 100%;
+    }
+}
+

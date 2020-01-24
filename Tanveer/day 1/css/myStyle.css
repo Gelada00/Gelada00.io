@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai|Hind&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Monda&display=swap');
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+body{
+    margin: 0;
+    background-color: #C6724B;
+    color: white;
+    font-family: 'Monda','Baloo Bhai',monospace,serif, sans-serif;
+}
+
+h1 {
+    color: white;
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    padding: 20px 10px;
+}
+
+#menu {
+    list-style-type: none;
+    text-align: right;
+    margin: 0px;
+    padding: 20px;
+
+    background-color: bisque;
+}
+
+#menu li {
+    display: inline;
+    padding: 20px;
+}
+
+#menu a {
+    text-decoration: none;
+}
+
+a li:hover {
+    color: black;
+    background-color: aqua;
+}
+
+a li:active {
+    color: red;
+}
+
+footer{
+    background-color:bisque; 
+    color: black;
+    padding: 10px;
+}
+
+/*to put video in the center of the page*/
+#centerDiv{
+    text-align: center;
+}
+
+.myForm
+{
+    padding: 20px;
+}
+
+.myForm label{
+    display: block;
+}
+
+.myForm input[type="text"], .myForm input[type="tel"], .myForm input[type="number"],.myForm input[type="email"] ,.myForm textarea
+{
+    padding: 5px;
+    width: 90%;
+}
+
+.btn1
+{
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px;   
+    border: none;
+    font-weight: bold;
+        
+}
+
+#formDiv{
+    width: 75%;
+    float: left;
+}
+
+#addressDiv{
+    width: 25%;
+    float: left;
+    margin-top: 40px;
+}
+
+.clear{
+    clear: both;
+}
